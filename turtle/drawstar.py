@@ -7,8 +7,8 @@ def draw_star(size, points):
         sys.exit(1)
 
     angle = 360 / points
-    r1 = 175
-    r2 = angle + 360 - r1
+    a1 = 175
+    a2 = angle + 360 - a1
         
     t = turtle.Pen()
     t.color(0.9, 0.75, 0)
@@ -16,9 +16,9 @@ def draw_star(size, points):
     for x in range(points * 2):
         t.forward(size)
         if x % 2:
-            t.left(r2)
+            t.left(a2)
         else:
-            t.left(r1)
+            t.left(a1)
     t.end_fill()
 
 draw_star(100, 20)
